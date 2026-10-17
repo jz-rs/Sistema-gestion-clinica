@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.mycompany.clinicaprivadadoo.controlador.MostrarTurnosController" spacing="20">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Gestión de Turnos y Órdenes de Consulta" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <TableView fx:id="tablaTurnos" prefHeight="400">
+        <columns>
+            <TableColumn fx:id="columnaId" text="ID Turno" prefWidth="100"/>
+            <TableColumn fx:id="columnaNro" text="Número Turno" prefWidth="150"/>
+            <TableColumn fx:id="columnaFecha" text="Fecha Turno" prefWidth="150"/>
+            <TableColumn fx:id="columnaDniPaciente" text="DNI Paciente" prefWidth="150" />
+            <TableColumn fx:id="columnaPaciente" text="Paciente" prefWidth="200"/>
+            <TableColumn fx:id="columnaServicio" text="Servicio" prefWidth="200"/>
+        </columns>
+    </TableView>
+</VBox>

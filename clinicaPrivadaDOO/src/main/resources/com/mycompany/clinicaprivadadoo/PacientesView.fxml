@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" xmlns="http://javafx.com/javafx"
+            fx:controller="com.mycompany.clinicaprivadadoo.controlador.PacienteController">
+    <center>
+        <TableView fx:id="tablePacientes">
+            <columns>
+                    <TableColumn fx:id="colDni" text="DNI" />
+    <TableColumn fx:id="colNombre" text="Nombre" />
+    <TableColumn fx:id="colApellido" text="Apellido" />
+    <TableColumn fx:id="colHistoriaClinica" text="Historia Clínica" />
+    <TableColumn fx:id="colFechaNac" text="Fecha Nac." /> <!-- Nueva columna -->
+    <TableColumn fx:id="colJefeGrupoFamiliar" text="Jefe Grupo Familiar" /> <!-- Nueva columna -->
+    <TableColumn fx:id="colCalle" text="Calle" />
+    <TableColumn fx:id="colNro" text="Número" />
+    <TableColumn fx:id="colBarrio" text="Barrio" />
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+        <VBox spacing="10" style="-fx-padding: 10;">
+             <Label text="Detalles del Paciente" style="-fx-font-weight: bold; -fx-font-size: 14;" />
+    <TextField fx:id="txtDni" promptText="DNI" editable="false" />
+    <TextField fx:id="txtNombre" promptText="Nombre" editable="false" />
+    <TextField fx:id="txtApellido" promptText="Apellido" editable="false" />
+    <TextField fx:id="txtHistoriaClinica" promptText="Historia Clínica" editable="false" />
+    <TextField fx:id="txtFechaNac" promptText="Fecha Nac." editable="false" /> <!-- Nuevo -->
+    <TextField fx:id="txtJefeGrupoFamiliar" promptText="Jefe Grupo Familiar" editable="false" /> <!-- Nuevo -->
+    <TextField fx:id="txtCalle" promptText="Calle" editable="false" />
+    <TextField fx:id="txtNro" promptText="Número" editable="false" />
+    <TextField fx:id="txtBarrio" promptText="Barrio" editable="false" />
+        </VBox>
+    </bottom>
+</BorderPane>

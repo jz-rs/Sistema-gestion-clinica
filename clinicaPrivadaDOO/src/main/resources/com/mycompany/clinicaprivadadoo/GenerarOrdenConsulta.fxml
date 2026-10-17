@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.mycompany.clinicaprivadadoo.controlador.GenerarOrdenConsultaController" stylesheets="@styles.css" styleClass="grid-pane" prefWidth="600">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+
+    <!-- Título -->
+    <Label text="Generar Orden de Consulta" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2" styleClass="label-title"/>
+
+    <!-- Fecha -->
+    <Label text="Fecha:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <Label fx:id="fechaLabel" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+    <!-- Paciente -->
+    <Label text="Paciente:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <Label fx:id="nombrePacienteLabel" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Label text="DNI:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+    <Label fx:id="dniPacienteLabel" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+    <!-- Servicio -->
+    <Label text="Servicio:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="servicioComboBox" GridPane.rowIndex="4" GridPane.columnIndex="1" prefWidth="250"/>
+
+    <!-- Tipo de Consulta -->
+    <Label text="Tipo de Consulta:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="tipoConsultaComboBox" GridPane.rowIndex="5" GridPane.columnIndex="1" prefWidth="250"/>
+
+    <!-- Costo Total -->
+    <Label text="Costo Total:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+    <Label fx:id="costoTotalLabel" GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+    <!-- Médico -->
+    <Label text="Médico:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+    <ComboBox fx:id="medicoComboBox" GridPane.rowIndex="7" GridPane.columnIndex="1" prefWidth="250"/>
+
+    <!-- Botón para Guardar -->
+    <Button text="Guardar Orden" onAction="#guardarOrden" GridPane.rowIndex="8" GridPane.columnIndex="0" GridPane.columnSpan="2" styleClass="button"/>
+</GridPane>

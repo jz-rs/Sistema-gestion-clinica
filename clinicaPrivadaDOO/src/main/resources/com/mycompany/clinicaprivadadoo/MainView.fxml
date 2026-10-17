@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane fx:id="mainPane" xmlns:fx="http://javafx.com/fxml" fx:controller="com.mycompany.clinicaprivadadoo.controlador.MainViewController" 
+          stylesheets="@styles.css" styleClass="grid-pane" prefWidth="400" prefHeight="500">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+    <hgap>10</hgap>
+    <vgap>15</vgap>
+
+    <!-- Título -->
+    <Label text="Consultar Registro de Paciente" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.columnSpan="2" styleClass="label-title"/>
+
+    <!-- DNI -->
+    <Label text="DNI:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="dniTextField" GridPane.rowIndex="1" GridPane.columnIndex="1" styleClass="text-field"/>
+
+    <!-- Botón Consultar -->
+    <Button text="Consultar" onAction="#consultarPaciente" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2" styleClass="button"/>
+
+    <!-- Resultado -->
+    <Label fx:id="resultLabel" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" styleClass="label-result"/>
+
+    <!-- Contenedor VBox para Botones -->
+    <VBox spacing="10" GridPane.rowIndex="4" GridPane.columnIndex="0" GridPane.columnSpan="2">
+        <!-- Botón Registrar Nuevo Paciente -->
+        <Button fx:id="registrarButton" text="Registrar Nuevo Paciente" onAction="#registrarNuevoPaciente" visible="false" styleClass="button"/>
+
+        <!-- Botón Generar Orden de Consulta -->
+        <Button fx:id="generarOrdenButton" text="Generar Orden de Consulta" onAction="#generarOrdenConsulta" visible="false" styleClass="button"/>
+
+        <!-- Botón Visualizar Pacientes -->
+        <Button text="Visualizar Pacientes" onAction="#abrirVisualizacionPacientes" styleClass="button"/>
+
+        <!-- Botón Mostrar Turnos -->
+        <Button fx:id="mostrarTurnosButton" text="Mostrar Turnos" onAction="#mostrarTurnos" styleClass="button"/>
+    </VBox>
+</GridPane>
